@@ -18,6 +18,8 @@ install: all
 	mkdir -p $(INSTALL_SPREAD_SPECTRUM_PATH)
 	install -m 644 spread_spectrum.ko $(INSTALL_SPREAD_SPECTRUM_PATH)
 
+modules_install: install
+
 clean:
 	$(MAKE) -C $(BUILD_KERNEL_PATH) M=$(CURDIR) clean
 
