@@ -23,6 +23,3 @@ modules_install:
 
 clean:
 	$(MAKE) -C $(BUILD_KERNEL_PATH) M=$(CURDIR) clean
-
-.PHONY: all install clean
-.EXPORT_ALL_VARIABLES:
