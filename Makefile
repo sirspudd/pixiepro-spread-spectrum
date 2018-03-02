@@ -8,11 +8,10 @@ obj-y := spread_spectrum.o
 
 spreadspec-objs := spread_spectrum.o
 
+modules: all
 all: spread_spectrum.ko
 
 spread_spectrum.ko: spread_spectrum.c
-	@echo "Compiling kernel module"
-	$(MAKE) -C $(BUILD_KERNEL_PATH) M=$(CURDIR) modules
 
 install: all
 	mkdir -p $(INSTALL_SPREAD_SPECTRUM_PATH)
