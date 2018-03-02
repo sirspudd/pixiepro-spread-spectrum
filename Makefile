@@ -18,7 +18,9 @@ install: all
 	mkdir -p $(INSTALL_SPREAD_SPECTRUM_PATH)
 	install -m 644 spread_spectrum.ko $(INSTALL_SPREAD_SPECTRUM_PATH)
 
-modules_install: install
+modules_install:
+	mkdir -p $(MODLIB)
+	install -m 644 spread_spectrum.ko $(MODLIB)
 
 clean:
 	$(MAKE) -C $(BUILD_KERNEL_PATH) M=$(CURDIR) clean
